@@ -361,4 +361,11 @@ footer {
     .intro {
         font-size: 1.05rem;
     }
+.soft-peach {
+    background: linear-gradient(
+        135deg,
+        #fffafa,
+        var(--soft-peach)
+    );
+}
 }
