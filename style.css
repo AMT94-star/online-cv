@@ -367,5 +367,19 @@ footer {
         #fffafa,
         var(--soft-peach)
     );
+footer {
+    max-width: 1180px;
+    margin: 60px auto 40px;
+    padding-top: 24px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
 }
 }
