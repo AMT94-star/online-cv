@@ -1,2 +1,9 @@
-document.getElementById("year").innerHTML =
-    "© " + new Date().getFullYear() + " Aslihan Taskin";
+```javascript
+const cards = document.querySelectorAll(".flip-card");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+    });
+});
+```
