@@ -1,15 +1,16 @@
 :root {
-    --bg: #fff8f5;
-    --surface: #fffdfb;
-    --text: #292424;
-    --muted: #7b7171;
-    --pink: #f7dfe4;
-    --rose: #d9899b;
-    --lavender: #eee6f6;
-    --cream: #f7efe8;
-    --sage: #e8efe7;
-    --border: #ecdde0;
-    --shadow: 0 24px 60px rgba(92, 60, 70, 0.10);
+    --bg: #f7efe4;
+    --surface: #fff8ee;
+    --text: #27211f;
+    --muted: #756b63;
+    --accent: #d96f5d;
+    --accent-dark: #8f3f35;
+    --pink: #f3b7b7;
+    --yellow: #f5c86a;
+    --mint: #b7d8c5;
+    --lavender: #cfc4e8;
+    --border: #27211f;
+    --shadow: 8px 8px 0 #27211f;
 }
 
 * {
@@ -23,15 +24,11 @@ html {
 body {
     margin: 0;
     background:
-        radial-gradient(circle at top left, #f7dfe4 0, transparent 34%),
-        radial-gradient(circle at top right, #eee6f6 0, transparent 32%),
+        radial-gradient(circle at 20% 20%, rgba(243,183,183,0.45), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(245,200,106,0.35), transparent 25%),
         var(--bg);
     color: var(--text);
     font-family: Arial, sans-serif;
-}
-
-a {
-    color: inherit;
 }
 
 .hero {
@@ -44,54 +41,59 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 90px;
+    margin-bottom: 85px;
 }
 
 .logo {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--border);
     border-radius: 50%;
-    background: var(--text);
-    color: white;
+    background: var(--yellow);
     display: grid;
     place-items: center;
     font-family: Georgia, serif;
-    margin: 0;
+    font-weight: bold;
+    box-shadow: 4px 4px 0 var(--text);
 }
 
 nav div {
     display: flex;
-    gap: 28px;
+    gap: 16px;
 }
 
-nav a {
+nav a,
+.hero-links a {
     text-decoration: none;
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
-nav a:hover {
     color: var(--text);
+    border: 2px solid var(--border);
+    background: var(--surface);
+    padding: 10px 16px;
+    border-radius: 999px;
+    box-shadow: 4px 4px 0 var(--text);
 }
 
-.hero-content {
-    max-width: 850px;
+nav a:hover,
+.hero-links a:hover,
+.project-card a:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--text);
 }
 
 .label,
 .section-label {
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    color: var(--rose);
+    color: var(--accent-dark);
     font-size: 0.78rem;
-    font-weight: 700;
+    font-weight: 800;
     margin: 0 0 16px;
 }
 
 .hero h1 {
     font-family: Georgia, serif;
-    font-size: clamp(4rem, 11vw, 8.5rem);
-    line-height: 0.95;
+    font-size: clamp(4rem, 11vw, 8.2rem);
+    line-height: 0.92;
     font-weight: 400;
     margin: 0;
 }
@@ -110,36 +112,27 @@ nav a:hover {
     gap: 16px;
 }
 
-.hero-links a {
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid var(--border);
-    padding: 12px 18px;
-    border-radius: 999px;
-    color: var(--text);
-    box-shadow: 0 10px 25px rgba(92, 60, 70, 0.06);
-}
-
-.hero-links a:hover {
-    background: var(--text);
-    color: white;
-}
-
 main {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 28px 70px;
 }
 
+.about,
+.card,
+.project-card,
+.experience-list article {
+    border: 2px solid var(--border);
+    border-radius: 26px;
+    box-shadow: var(--shadow);
+}
+
 .about {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 60px;
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid var(--border);
-    border-radius: 34px;
+    background: var(--surface);
     padding: 48px;
-    box-shadow: var(--shadow);
     margin-bottom: 34px;
 }
 
@@ -167,18 +160,15 @@ main {
 }
 
 .card {
-    border-radius: 34px;
     padding: 38px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
 }
 
 .soft-pink {
-    background: linear-gradient(135deg, #fffafa, var(--pink));
+    background: #ffe1dc;
 }
 
 .soft-lavender {
-    background: linear-gradient(135deg, #fffafa, var(--lavender));
+    background: #eee4ff;
 }
 
 .card h2 {
@@ -190,7 +180,7 @@ main {
 
 .timeline-item {
     padding: 22px 0;
-    border-bottom: 1px solid rgba(80, 60, 70, 0.12);
+    border-bottom: 2px solid rgba(39, 33, 31, 0.18);
 }
 
 .timeline-item:last-child {
@@ -216,10 +206,10 @@ main {
 .project-card span,
 .experience-list span {
     display: inline-block;
-    color: var(--rose);
+    color: var(--accent-dark);
     font-size: 0.9rem;
     margin-top: 8px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .tags {
@@ -230,8 +220,8 @@ main {
 }
 
 .tags span {
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid var(--border);
+    background: var(--surface);
+    border: 2px solid var(--border);
     padding: 8px 13px;
     border-radius: 999px;
     color: var(--text);
@@ -256,35 +246,38 @@ main {
 .project-card {
     min-height: 310px;
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 30px;
     padding: 28px;
-    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
 }
 
+.project-card:nth-child(1) {
+    background: #ffe1dc;
+}
+
 .project-card:nth-child(2) {
-    background: var(--cream);
+    background: #fff0bf;
 }
 
 .project-card:nth-child(3) {
-    background: var(--sage);
+    background: #dff0e5;
 }
 
 .project-card:nth-child(4) {
-    background: var(--lavender);
+    background: #eee4ff;
 }
 
 .project-card a {
     margin-top: auto;
-    color: var(--rose);
+    color: var(--text);
     text-decoration: none;
-    font-weight: 700;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
+    font-weight: 800;
+    border: 2px solid var(--border);
+    background: var(--surface);
+    padding: 10px 14px;
+    border-radius: 999px;
+    box-shadow: 4px 4px 0 var(--text);
+    width: fit-content;
 }
 
 .experience-list {
@@ -294,18 +287,15 @@ main {
 }
 
 .experience-list article {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid var(--border);
-    border-radius: 30px;
+    background: var(--surface);
     padding: 34px;
-    box-shadow: var(--shadow);
 }
 
 footer {
     max-width: 1180px;
     margin: 0 auto 50px;
     padding: 24px 28px 0;
-    border-top: 1px solid var(--border);
+    border-top: 2px solid var(--border);
     color: var(--muted);
 }
 
@@ -338,7 +328,7 @@ footer {
 
     nav div {
         flex-wrap: wrap;
-        gap: 18px;
+        gap: 12px;
     }
 
     main {
@@ -349,7 +339,7 @@ footer {
     .card,
     .experience-list article,
     .project-card {
-        border-radius: 26px;
+        border-radius: 22px;
         padding: 28px;
     }
 
