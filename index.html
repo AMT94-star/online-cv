@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -7,138 +8,133 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="hero">
-        <h1>Aslihan Taskin</h1>
-        <p class="subtitle">Javautvecklare | Backendutveckling | LIA hösten 2026</p>
 
-        <div class="contact-bar">
-            <a href="mailto:aslihan.taskin94@gmail.com">aslihan.taskin94@gmail.com</a>
-            <a href="tel:+46737739808">+46 73 773 98 08</a>
-            <a href="https://github.com/AMT94-star" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/aslihan-taskin" target="_blank">LinkedIn</a>
-        </div>
+<header>
+    <h1>Aslihan Taskin</h1>
+    <p>Javautvecklare | Backendutveckling | LIA hösten 2026</p>
+
+    <div class="contact-bar">
+        <a href="mailto:aslihan.taskin94@gmail.com">✉ aslihan.taskin94@gmail.com</a>
+        <a href="tel:+46737739808">☎ +46 73 773 98 08</a>
+        <a href="https://github.com/AMT94-star" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/aslihan-taskin" target="_blank">LinkedIn</a>
     </div>
 </header>
-<main>
-    <section class="profile-section">
-        <h2>Profil</h2>
-        <p>
-            Jag är en engagerad och nyfiken IT-student inom mjukvaruutveckling med fokus på backendutveckling.
-            Jag har ett stort intresse för utveckling, teknisk problemlösning och moderna utvecklingsmiljöer.
-            Jag är lättlärd, lösningsorienterad och söker LIA inför hösten 2026.
-        </p>
-    </section>
 
-    <div class="content-grid">
-        <section>
-            <h2>Utbildning</h2>
-            <p><strong>Javautvecklare</strong><br>IT-Högskolan, Stockholm, 2025–2027</p>
-            <p><strong>Datorvetenskap med inriktning mot spelutveckling</strong><br>Blekinge Tekniska Högskolan, 2018–2022</p>
-            <p><strong>IT-program</strong><br>Cybergymnasiet, Stockholm, 2010–2013</p>
-        </section>
+<main class="card-grid">
 
-        <section>
-            <h2>Kunskaper & språk</h2>
-
-            <h3>Tekniska kunskaper</h3>
-            <ul class="tags">
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>Spring Security</li>
-                <li>Hibernate</li>
-                <li>JPA</li>
-                <li>REST API</li>
-                <li>PostgreSQL</li>
-                <li>SQL</li>
-                <li>NoSQL</li>
-                <li>Docker</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>GitHub Actions</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
-
-            <h3>Språk</h3>
-            <ul class="tags">
-                <li>Svenska</li>
-                <li>Engelska</li>
-                <li>Turkiska</li>
-                <li>Japanska</li>
-            </ul>
-        </section>
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="card-front pink">
+                <div class="icon">♡</div>
+                <h2>Om mig</h2>
+                <span>Klicka för att vända</span>
+            </div>
+            <div class="card-back">
+                <h2>Om mig</h2>
+                <p>
+                    Jag är en engagerad och nyfiken IT-student inom mjukvaruutveckling
+                    med fokus på backendutveckling. Jag är lättlärd, lösningsorienterad
+                    och söker LIA inför hösten 2026.
+                </p>
+            </div>
+        </div>
     </div>
 
-    <section>
-        <h2>Projekt</h2>
-
-        <div class="project-grid">
-            <article class="project-card">
-                <h3>E-Commerce System</h3>
-                <p>
-                    E-handelssystem byggt med Java, Spring Boot, Spring Security,
-                    PostgreSQL, Docker och Render.
-                </p>
-                <a href="DIN_GITHUB_LÄNK_HÄR" target="_blank">GitHub →</a>
-            </article>
-
-            <article class="project-card">
-                <h3>Webshop Microservices Project</h3>
-                <p>
-                    Grupprojekt med mikrotjänster där jag ansvarade för auth-servern,
-                    JWT, roller och integrationstester.
-                </p>
-                <a href="DIN_GITHUB_LÄNK_HÄR" target="_blank">GitHub →</a>
-            </article>
-
-            <article class="project-card">
-                <h3>HR-system</h3>
-                <p>
-                    HR-system med CRUD-funktionalitet för avdelningar, anställda,
-                    roller och frånvaro.
-                </p>
-                <a href="DIN_GITHUB_LÄNK_HÄR" target="_blank">GitHub →</a>
-            </article>
-
-            <article class="project-card">
-                <h3>Statistikprogram</h3>
-                <p>
-                    Statistikprogram i Java med SQL, datavisualisering, grafer samt
-                    import och export av Excel-filer.
-                </p>
-                <a href="DIN_GITHUB_LÄNK_HÄR" target="_blank">GitHub →</a>
-            </article>
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="card-front green">
+                <div class="icon">⌂</div>
+                <h2>Utbildning</h2>
+                <span>Klicka för att vända</span>
+            </div>
+            <div class="card-back">
+                <h2>Utbildning</h2>
+                <p><strong>Javautvecklare</strong><br>IT-Högskolan, Stockholm, 2025–2027</p>
+                <p><strong>Datorvetenskap mot spelutveckling</strong><br>Blekinge Tekniska Högskolan, 2018–2022</p>
+                <p><strong>IT-program</strong><br>Cybergymnasiet, Stockholm, 2010–2013</p>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>Arbetslivserfarenhet</h2>
-
-        <div class="experience-item">
-            <h3>3D-Artist, Frilans</h3>
-            <span>2022–2025</span>
-            <p>
-                Arbetade självständigt med kundanpassade projekt och iterativ utveckling
-                av 3D-modeller för produktion och 3D-utskrift.
-            </p>
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="card-front lavender">
+                <div class="icon">&lt;/&gt;</div>
+                <h2>Kunskaper</h2>
+                <span>Klicka för att vända</span>
+            </div>
+            <div class="card-back">
+                <h2>Tekniska kunskaper & språk</h2>
+                <div class="tags">
+                    <span>Java</span><span>Spring Boot</span><span>Spring Security</span>
+                    <span>Hibernate</span><span>JPA</span><span>REST API</span>
+                    <span>PostgreSQL</span><span>SQL</span><span>NoSQL</span>
+                    <span>Docker</span><span>Git</span><span>GitHub</span>
+                    <span>HTML</span><span>CSS</span>
+                </div>
+                <h3>Språk</h3>
+                <div class="tags">
+                    <span>Svenska</span><span>Engelska</span><span>Turkiska</span><span>Japanska</span>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="experience-item">
-            <h3>Säljare, Byggmax AB</h3>
-            <span>2018</span>
-            <p>
-                Arbetade med kundkontakt, strukturering av arbetsflöden, skyltplacering
-                och uppdatering av produktpriser.
-            </p>
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="card-front peach">
+                <div class="icon">⌘</div>
+                <h2>Projekt</h2>
+                <span>Klicka för att vända</span>
+            </div>
+            <div class="card-back">
+                <h2>Projekt</h2>
+
+                <div class="project">
+                    <strong>E-Commerce System</strong>
+                    <p>Java, Spring Boot, Spring Security, PostgreSQL, Docker och Render.</p>
+                    <a href="DIN_GITHUB_LÄNK_HÄR" target="_blank">GitHub →</a>
+                </div>
+
+                <div class="project">
+                    <strong>Webshop Microservices Project</strong>
+                    <p>Auth-server, JWT, roller, PostgreSQL, Docker och integrationstester.</p>
+                    <a href="DIN_GITHUB_LÄNK_HÄR" target="_blank">GitHub →</a>
+                </div>
+
+                <div class="project">
+                    <strong>HR-system</strong>
+                    <p>CRUD-system för avdelningar, anställda, roller och frånvaro.</p>
+                    <a href="DIN_GITHUB_LÄNK_HÄR" target="_blank">GitHub →</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <div class="flip-card wide">
+        <div class="flip-inner">
+            <div class="card-front beige">
+                <div class="icon">★</div>
+                <h2>Arbetslivserfarenhet</h2>
+                <span>Klicka för att vända</span>
+            </div>
+            <div class="card-back">
+                <h2>Arbetslivserfarenhet</h2>
+                <p><strong>3D-Artist, Frilans</strong> | 2022–2025</p>
+                <p>Arbetade självständigt med kundanpassade projekt och 3D-modeller för produktion och 3D-utskrift.</p>
+
+                <p><strong>Säljare, Byggmax AB</strong> | 2018</p>
+                <p>Arbetade med kundkontakt, strukturering av arbetsflöden och uppdatering av produktpriser.</p>
+            </div>
+        </div>
+    </div>
+
 </main>
 
-<footer>
-    <p id="year"></p>
-</footer>
+<footer></footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+```
