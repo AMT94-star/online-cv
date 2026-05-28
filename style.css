@@ -1,15 +1,17 @@
 :root {
-    --bg: #fffaf7;
-    --text: #252323;
-    --muted: #746d69;
-    --pink: #f8e6e6;
-    --green: #eef2e8;
-    --lavender: #f1eaf5;
-    --peach: #fff0e5;
-    --beige: #f5eee7;
-    --accent-pink: #d88f8f;
-    --shadow: 0 14px 35px rgba(90, 70, 60, 0.12);
-    --border: #eee0da;
+    --background: #fffaf7;
+    --text: #2b2727;
+    --muted: #746f6f;
+
+    --pink: #f9e7e7;
+    --green: #eef3e9;
+    --lavender: #f1e9f6;
+    --peach: #fff0e4;
+    --beige: #f6eee7;
+
+    --accent: #d98f8f;
+    --border: #eadcda;
+    --shadow: 0 14px 35px rgba(90, 70, 70, 0.13);
 }
 
 * {
@@ -18,36 +20,36 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: var(--bg);
+    background: var(--background);
     color: var(--text);
+    font-family: Arial, sans-serif;
 }
 
-header {
+.hero {
     text-align: center;
     padding: 65px 20px 45px;
     border-bottom: 1px solid var(--border);
 }
 
-header h1 {
+.hero h1 {
     margin: 0;
     font-family: Georgia, serif;
-    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-size: clamp(3rem, 8vw, 5.3rem);
     font-weight: 400;
 }
 
-header p {
-    margin: 15px 0 35px;
+.hero p {
+    margin: 16px 0 34px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--text);
+    font-size: 1rem;
 }
 
 .contact-bar {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 34px;
+    gap: 28px;
 }
 
 .contact-bar a {
@@ -62,18 +64,18 @@ header p {
     border-right: none;
 }
 
-.card-grid {
+.cards {
     max-width: 1050px;
-    margin: 42px auto 60px;
-    padding: 0 22px;
+    margin: 45px auto 60px;
+    padding: 0 24px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px 42px;
+    gap: 34px 44px;
 }
 
 .flip-card {
-    height: 320px;
-    perspective: 1200px;
+    height: 330px;
+    perspective: 1000px;
     cursor: pointer;
 }
 
@@ -85,10 +87,10 @@ header p {
 }
 
 .flip-inner {
-    position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
+    position: relative;
+    transition: transform 0.7s ease;
     transform-style: preserve-3d;
 }
 
@@ -100,56 +102,67 @@ header p {
 .card-back {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
     border-radius: 22px;
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
     backface-visibility: hidden;
-    padding: 34px;
+    -webkit-backface-visibility: hidden;
 }
 
 .card-front {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 14px;
     text-align: center;
 }
 
 .card-back {
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.9);
     transform: rotateY(180deg);
     overflow-y: auto;
 }
 
-.pink { background: var(--pink); }
-.green { background: var(--green); }
-.lavender { background: var(--lavender); }
-.peach { background: var(--peach); }
-.beige { background: var(--beige); }
+.pink {
+    background: var(--pink);
+}
+
+.green {
+    background: var(--green);
+}
+
+.lavender {
+    background: var(--lavender);
+}
+
+.peach {
+    background: var(--peach);
+}
+
+.beige {
+    background: var(--beige);
+}
 
 .icon {
     width: 105px;
     height: 105px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.45);
     display: grid;
     place-items: center;
-    font-size: 2.5rem;
-    color: var(--text);
+    background: rgba(255, 255, 255, 0.55);
+    font-size: 2.4rem;
 }
 
 h2 {
     margin: 0;
-    font-size: 1.55rem;
+    font-size: 1.45rem;
     font-weight: 500;
-    letter-spacing: 1.5px;
     text-transform: uppercase;
-}
-
-h3 {
-    margin-bottom: 8px;
-    font-size: 1rem;
+    letter-spacing: 1.5px;
 }
 
 .card-front h2::after {
@@ -157,57 +170,58 @@ h3 {
     display: block;
     width: 48px;
     height: 2px;
-    background: var(--accent-pink);
+    background: var(--accent);
     margin: 16px auto 0;
 }
 
-.card-front span {
-    margin-top: 14px;
-    font-size: 0.78rem;
+.card-front p {
+    margin: 8px 0 0;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.3px;
     color: var(--muted);
 }
 
-.card-front span::before {
+.card-front p::before {
     content: "↻";
-    margin-right: 10px;
-    font-size: 1rem;
+    margin-right: 9px;
     color: var(--text);
 }
 
 .card-back h2 {
-    color: var(--accent-pink);
-    margin-bottom: 20px;
+    color: var(--accent);
     font-size: 1.25rem;
+    margin-bottom: 18px;
+}
+
+.card-back h3 {
+    margin: 18px 0 10px;
 }
 
 .card-back p {
-    color: var(--text);
     line-height: 1.6;
-    margin: 0 0 14px;
+    margin: 0 0 13px;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 9px;
-    margin-bottom: 20px;
+    gap: 8px;
 }
 
 .tags span {
-    background: rgba(255, 255, 255, 0.65);
+    background: #fff7f7;
     border: 1px solid var(--border);
     border-radius: 999px;
-    padding: 6px 12px;
-    font-size: 0.85rem;
+    padding: 6px 11px;
+    font-size: 0.83rem;
 }
 
 .project {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 4px 18px;
-    padding: 10px 0;
+    gap: 5px 15px;
+    padding: 9px 0;
     border-bottom: 1px solid var(--border);
 }
 
@@ -217,15 +231,15 @@ h3 {
 
 .project p {
     grid-column: 1;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 }
 
 .project a {
     grid-column: 2;
     grid-row: 1 / span 2;
     align-self: center;
-    color: var(--accent-pink);
-    font-weight: 600;
+    color: var(--accent);
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -236,11 +250,11 @@ h3 {
 footer {
     max-width: 900px;
     margin: 0 auto 50px;
-    border-top: 1px solid #d7b4b4;
+    border-top: 1px solid #d8b4b4;
 }
 
-@media (max-width: 800px) {
-    .card-grid {
+@media (max-width: 850px) {
+    .cards {
         grid-template-columns: 1fr;
     }
 
@@ -250,21 +264,11 @@ footer {
     }
 
     .contact-bar {
-        gap: 16px;
         flex-direction: column;
+        gap: 14px;
     }
 
     .contact-bar a {
         border-right: none;
     }
-}
-
-.card-front,
-.card-back {
-    width: 100%;
-    height: 100%;
-}
-
-.card-back {
-    background: white;
 }
