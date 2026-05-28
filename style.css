@@ -1,15 +1,21 @@
 :root {
     --bg: #fff8f6;
     --surface: rgba(255, 255, 255, 0.72);
+
     --text: #2f292b;
     --muted: #7d7175;
+
     --rose: #c9788f;
+
     --soft-pink: #f8e3e8;
     --soft-lavender: #eee8f7;
     --soft-peach: #fff0e7;
     --soft-sage: #edf3ed;
+
     --border: #efdde3;
-    --shadow: 0 24px 60px rgba(130, 85, 100, 0.11);
+
+    --shadow:
+        0 24px 60px rgba(130, 85, 100, 0.11);
 }
 
 * {
@@ -22,11 +28,20 @@ html {
 
 body {
     margin: 0;
+
     background:
-        radial-gradient(circle at top left, rgba(248, 227, 232, 0.9), transparent 34%),
-        radial-gradient(circle at top right, rgba(238, 232, 247, 0.85), transparent 30%),
+        radial-gradient(circle at top left,
+        rgba(248, 227, 232, 0.9),
+        transparent 34%),
+
+        radial-gradient(circle at top right,
+        rgba(238, 232, 247, 0.85),
+        transparent 30%),
+
         var(--bg);
+
     color: var(--text);
+
     font-family: Arial, sans-serif;
 }
 
@@ -36,26 +51,38 @@ a {
 
 .hero {
     max-width: 1180px;
+
     margin: 0 auto;
+
     padding: 30px 28px 75px;
 }
 
 nav {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 85px;
 }
 
 .logo {
     width: 48px;
     height: 48px;
+
     border-radius: 50%;
+
     background: var(--text);
+
     color: white;
+
     display: grid;
+
     place-items: center;
+
     font-family: Georgia, serif;
+
     margin: 0;
 }
 
@@ -66,7 +93,9 @@ nav div {
 
 nav a {
     text-decoration: none;
+
     color: var(--muted);
+
     font-size: 0.95rem;
 }
 
@@ -77,117 +106,202 @@ nav a:hover {
 .label,
 .section-label {
     text-transform: uppercase;
+
     letter-spacing: 2.5px;
+
     color: var(--rose);
+
     font-size: 0.78rem;
+
     font-weight: 700;
+
     margin: 0 0 16px;
 }
 
 .hero h1 {
     font-family: Georgia, serif;
+
     font-size: clamp(4rem, 11vw, 8.4rem);
+
     line-height: 0.95;
+
     font-weight: 400;
+
     margin: 0;
 }
 
 .intro {
     max-width: 620px;
+
     font-size: 1.25rem;
+
     line-height: 1.7;
+
     color: var(--muted);
+
     margin: 28px 0 36px;
 }
 
 .hero-links {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 16px;
 }
 
 .hero-links a {
     text-decoration: none;
+
     background: var(--surface);
+
     border: 1px solid var(--border);
+
     padding: 12px 18px;
+
     border-radius: 999px;
+
     color: var(--text);
-    box-shadow: 0 10px 25px rgba(130, 85, 100, 0.08);
+
+    box-shadow:
+        0 10px 25px rgba(130, 85, 100, 0.08);
 }
 
 .hero-links a:hover {
     background: var(--rose);
+
     color: white;
 }
 
 main {
     max-width: 1180px;
+
     margin: 0 auto;
+
     padding: 0 28px 70px;
 }
 
 .about {
     display: grid;
+
     grid-template-columns: 0.9fr 1.1fr;
+
     gap: 60px;
+
     background: var(--surface);
+
     backdrop-filter: blur(18px);
+
     border: 1px solid var(--border);
+
     border-radius: 34px;
+
     padding: 48px;
+
     box-shadow: var(--shadow);
+
     margin-bottom: 34px;
 }
 
 .about h2,
 .section-heading h2 {
     font-family: Georgia, serif;
+
     font-weight: 400;
+
     font-size: clamp(2rem, 4vw, 3.4rem);
+
     line-height: 1.05;
+
     margin: 0;
 }
 
 .about p:last-child {
     color: var(--muted);
+
     font-size: 1.05rem;
+
     line-height: 1.8;
+
     margin: 0;
 }
 
 .grid-section {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 34px;
+
     margin-bottom: 70px;
 }
 
-.card {
+.card,
+.split-card {
     border-radius: 34px;
-    padding: 38px;
+
     border: 1px solid var(--border);
+
     box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+.card {
+    padding: 38px;
 }
 
 .soft-pink {
-    background: linear-gradient(135deg, #fffafa, var(--soft-pink));
+    background:
+        linear-gradient(
+            135deg,
+            #fffafa,
+            var(--soft-pink)
+        );
 }
 
-.soft-lavender {
-    background: linear-gradient(135deg, #fffafa, var(--soft-lavender));
+.split-card {
+    background:
+        linear-gradient(
+            135deg,
+            #fffafa,
+            var(--soft-lavender)
+        );
 }
 
-.card h2 {
+.split-section {
+    padding: 38px;
+}
+
+.language-section {
+    min-height: 180px;
+}
+
+.split-divider {
+    height: 1px;
+
+    background:
+        rgba(130, 85, 100, 0.13);
+
+    margin: 0 38px;
+}
+
+.card h2,
+.split-card h2 {
     font-family: Georgia, serif;
+
     font-size: 2.2rem;
+
     font-weight: 400;
+
     margin: 0 0 28px;
 }
 
 .timeline-item {
     padding: 22px 0;
-    border-bottom: 1px solid rgba(130, 85, 100, 0.13);
+
+    border-bottom:
+        1px solid rgba(130, 85, 100, 0.13);
 }
 
 .timeline-item:last-child {
@@ -198,6 +312,7 @@ main {
 .project-card h3,
 .experience-list h3 {
     margin: 0 0 8px;
+
     font-size: 1.15rem;
 }
 
@@ -205,7 +320,9 @@ main {
 .project-card p,
 .experience-list p {
     margin: 0;
+
     color: var(--muted);
+
     line-height: 1.7;
 }
 
@@ -213,25 +330,36 @@ main {
 .project-card span,
 .experience-list span {
     display: inline-block;
+
     color: var(--rose);
+
     font-size: 0.9rem;
+
     margin-top: 8px;
+
     font-weight: 700;
 }
 
 .tags {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 10px;
-    margin-bottom: 30px;
 }
 
 .tags span {
-    background: rgba(255, 255, 255, 0.68);
+    background:
+        rgba(255, 255, 255, 0.68);
+
     border: 1px solid var(--border);
+
     padding: 8px 13px;
+
     border-radius: 999px;
+
     color: var(--text);
+
     font-size: 0.9rem;
 }
 
@@ -246,18 +374,25 @@ main {
 
 .project-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 22px;
 }
 
 .project-card {
     min-height: 310px;
-    background: var(--surface);
+
     border: 1px solid var(--border);
+
     border-radius: 30px;
+
     padding: 28px;
+
     box-shadow: var(--shadow);
+
     display: flex;
+
     flex-direction: column;
 }
 
@@ -279,8 +414,11 @@ main {
 
 .project-card a {
     margin-top: auto;
+
     color: var(--rose);
+
     text-decoration: none;
+
     font-weight: 700;
 }
 
@@ -290,27 +428,44 @@ main {
 
 .experience-list {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 26px;
 }
 
 .experience-list article {
     background: var(--surface);
+
     border: 1px solid var(--border);
+
     border-radius: 30px;
+
     padding: 34px;
+
     box-shadow: var(--shadow);
 }
 
 footer {
     max-width: 1180px;
+
     margin: 0 auto 50px;
+
     padding: 24px 28px 0;
+
     border-top: 1px solid var(--border);
+
+    text-align: center;
+
     color: var(--muted);
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
 }
 
 @media (max-width: 950px) {
+
     .about,
     .grid-section,
     .experience-list {
@@ -327,18 +482,22 @@ footer {
 }
 
 @media (max-width: 650px) {
+
     .hero {
         padding: 24px 20px 55px;
     }
 
     nav {
         align-items: flex-start;
+
         gap: 22px;
+
         flex-direction: column;
     }
 
     nav div {
         flex-wrap: wrap;
+
         gap: 18px;
     }
 
@@ -348,9 +507,11 @@ footer {
 
     .about,
     .card,
+    .split-section,
     .experience-list article,
     .project-card {
         border-radius: 26px;
+
         padding: 28px;
     }
 
@@ -361,63 +522,4 @@ footer {
     .intro {
         font-size: 1.05rem;
     }
-.soft-peach {
-    background: linear-gradient(
-        135deg,
-        #fffafa,
-        var(--soft-peach)
-    );
-footer {
-    max-width: 1180px;
-    margin: 60px auto 40px;
-    padding-top: 24px;
-
-    border-top: 1px solid var(--border);
-
-    text-align: center;
-
-    color: var(--muted);
-
-    font-size: 0.9rem;
-
-    letter-spacing: 1px;
-}
-
-.split-card {
-    background: linear-gradient(
-        135deg,
-        #fffafa,
-        var(--soft-lavender)
-    );
-
-    border-radius: 34px;
-
-    border: 1px solid var(--border);
-
-    box-shadow: var(--shadow);
-
-    overflow: hidden;
-
-    display: flex;
-
-    flex-direction: column;
-}
-
-.split-section {
-    padding: 38px;
-}
-
-.split-section h2 {
-    font-family: Georgia, serif;
-    font-size: 2rem;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 24px;
-}
-
-.split-divider {
-    height: 1px;
-    background: rgba(130, 85, 100, 0.15);
-    margin: 0 38px;
-}
 }
