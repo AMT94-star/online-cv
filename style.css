@@ -97,6 +97,8 @@ nav a {
     color: var(--muted);
 
     font-size: 0.95rem;
+
+    transition: 0.2s ease;
 }
 
 nav a:hover {
@@ -163,6 +165,10 @@ nav a:hover {
 
     color: var(--text);
 
+    backdrop-filter: blur(10px);
+
+    transition: 0.25s ease;
+
     box-shadow:
         0 10px 25px rgba(130, 85, 100, 0.08);
 }
@@ -171,6 +177,8 @@ nav a:hover {
     background: var(--rose);
 
     color: white;
+
+    transform: translateY(-2px);
 }
 
 main {
@@ -267,14 +275,26 @@ main {
             #fffafa,
             var(--soft-lavender)
         );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
 }
 
 .split-section {
-    padding: 38px;
+    padding: 34px 38px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
 }
 
 .language-section {
-    min-height: 180px;
+    min-height: auto;
 }
 
 .split-divider {
@@ -394,6 +414,12 @@ main {
     display: flex;
 
     flex-direction: column;
+
+    transition: 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
 }
 
 .project-card:nth-child(1) {
