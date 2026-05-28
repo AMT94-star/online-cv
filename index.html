@@ -153,6 +153,16 @@
 
 <footer></footer>
 
-<script src="script.js"></script>
+<script>
+    const cards = document.querySelectorAll(".flip-card");
+
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("flipped");
+        });
+    });
+</script>
+</body>
+</html>
 </body>
 </html>
